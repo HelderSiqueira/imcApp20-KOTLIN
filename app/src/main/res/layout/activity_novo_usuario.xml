@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.NovoUsuarioActivity">
+    tools:context=".ui.NovoUsuarioActivity"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Trocar foto"
+            android:textColor="@color/colorPrimaryDark"
             android:fontFamily=""
             android:textStyle="bold"
             android:layout_marginTop="8dp"
@@ -46,100 +49,147 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_view_profile"
             app:layout_constraintBottom_toBottomOf="parent"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
         android:id="@+id/et_nome"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_senha" />
+        app:layout_constraintTop_toBottomOf="@id/tv_pessoais" />
 
     <EditText
         android:id="@+id/et_profissao"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Profissão"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_nome" />
 
     <EditText
         android:id="@+id/et_peso"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Peso"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/cl_header"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_profissao" />
+        app:layout_constraintTop_toBottomOf="@+id/et_altura" />
 
     <EditText
         android:id="@+id/et_data_nascimento"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:focusable="false"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:focusable="false"
         android:hint="Data de Nascimento"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_peso" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_biometricos" />
 
     <Button
         android:id="@+id/bt_gravar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="Gravar"
-        app:layout_constraintEnd_toEndOf="@+id/et_data_nascimento"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/et_data_nascimento"
-        app:layout_constraintTop_toBottomOf="@+id/et_altura" />
+        app:layout_constraintEnd_toEndOf="@+id/cl_header"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cl_header"
+        app:layout_constraintTop_toBottomOf="@+id/et_peso" />
 
     <EditText
         android:id="@+id/et_email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/cl_header"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cl_header" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_autenticacao" />
 
     <EditText
         android:id="@+id/et_senha"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/cl_header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <EditText
         android:id="@+id/et_altura"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Altura "
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/cl_header"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_data_nascimento"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_data_nascimento" />
+
+    <TextView
+        android:id="@+id/tv_autenticacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="17dp"
+        android:textColor="#BFC0D1"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="25dp"
+        android:text="Dados para autenticação"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cl_header"
+        app:layout_constraintTop_toBottomOf="@+id/cl_header" />
+
+    <TextView
+        android:id="@+id/tv_pessoais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="17dp"
+        android:textColor="#BFC0D1"
+        android:drawableStart="@drawable/person"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="25dp"
+        android:text="Dados pessoais"
+        app:layout_constraintTop_toBottomOf="@+id/et_senha"
+        tools:layout_editor_absoluteX="126dp" />
+
+    <TextView
+        android:id="@+id/tv_biometricos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="17dp"
+        android:textColor="#BFC0D1"
+        android:drawableStart="@drawable/microscope"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="25dp"
+        android:text="Dados biométricos"
+        app:layout_constraintTop_toBottomOf="@+id/et_profissao"
+        tools:layout_editor_absoluteX="124dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
