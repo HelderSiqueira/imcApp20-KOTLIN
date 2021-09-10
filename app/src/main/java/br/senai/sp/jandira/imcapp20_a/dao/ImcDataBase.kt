@@ -2,10 +2,11 @@ package br.senai.sp.jandira.imcapp20_a.dao
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import android.util.Log
 import org.jetbrains.anko.db.ManagedSQLiteOpenHelper
 
 const val DATABASE_NAME = "imc.db"
-const val DATABASE_VERSION = 1
+const val DATABASE_VERSION = 2
 
 class ImcDataBase(context: Context) :
     ManagedSQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -18,13 +19,15 @@ class ImcDataBase(context: Context) :
 
     override fun onCreate(db: SQLiteDatabase) {
 
+        Log.i( "XPTO", "Abrir onCreate")
+
         criarTabelaUsuario(db)
         criarTabelaBiometria(db)
 
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+        db!!.execSQL("DELETE FROM tb_usuario")
     }
 
     fun criarTabelaUsuario(db: SQLiteDatabase) {

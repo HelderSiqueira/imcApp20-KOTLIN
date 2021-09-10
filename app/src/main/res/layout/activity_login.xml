@@ -80,7 +80,8 @@
         android:hint="E-mail"
         android:drawableStart="@drawable/ic_email_24"
         android:drawableTint="@color/colorAccent"
-        android:drawablePadding="16dp"/>
+        android:drawablePadding="16dp"
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:id="@+id/ed_password"
@@ -90,7 +91,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="12dp"
-        android:inputType="textPassword"
+        android:inputType="numberPassword"
         android:background="@drawable/edit_text_login_background"
         android:padding="16dp"
         android:hint="Senha"
